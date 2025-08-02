@@ -2,5 +2,6 @@
 
 Projeto gerador de senhas seguras e aleatórias para os usuários.
 
-Linguagem utilizada: Python
-Interface (GUI): Tkinter 
+-Linguagem utilizada: Python
+
+-Interface (GUI): Tkinter 
