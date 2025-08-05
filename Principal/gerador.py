@@ -1,4 +1,5 @@
 import tkinter as tk
+from PIL import Image, ImageTk
 
 #Janela
 janela = tk.Tk()
@@ -12,10 +13,19 @@ janela.maxsize(width=600, height=400)
 frame_principal = tk.Frame(janela, bg="lightgray")
 frame_principal.pack(expand=True)
 
+#Imagem
+caminho_imagem = "Principal/foto.png"
+imagem = Image.open(caminho_imagem)
+imagem_tamanho = imagem.resize((400, 150))
+foto1 = ImageTk.PhotoImage(imagem_tamanho)
+
+label_imagem = tk.Label(frame_principal, image = foto1, bg = "lightblue")
+label_imagem.pack(pady = 10)
+
 #Frame gerar senha
 frame_senha = tk.Frame(frame_principal, bg="lightgray")
 frame_senha.pack(pady=10)
-label_senha = tk.Label(frame_senha, text="Escolha a quantidade de dígitos da senha:", bg="gray")
+label_senha = tk.Label(frame_senha, text="Escolha a quantidade de dígitos da senha:",font=("Comic Sans Ms",12), bg="lightgray")
 label_senha.pack(pady = 5)
 tamanho_senha = tk.Spinbox(frame_senha)
 tamanho_senha.pack(side = "left", padx=5)
