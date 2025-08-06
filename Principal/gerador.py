@@ -16,12 +16,12 @@ frame_principal = tk.Frame(janela, bg="lightgray")
 frame_principal.pack(expand=True)
 
 #Imagem
-caminho_imagem = "Principal/foto.png"
+caminho_imagem = "Principal/foto_gerador.jpg"
 imagem = Image.open(caminho_imagem)
-imagem_tamanho = imagem.resize((400, 150))
+imagem_tamanho = imagem.resize((450, 150))
 foto1 = ImageTk.PhotoImage(imagem_tamanho)
 
-label_imagem = tk.Label(frame_principal, image = foto1, bg = "lightblue")
+label_imagem = tk.Label(frame_principal, image = foto1, bg = "lightgray")
 label_imagem.pack(pady = 10)
 
 
