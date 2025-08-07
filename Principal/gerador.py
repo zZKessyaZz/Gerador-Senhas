@@ -7,12 +7,12 @@ import random
 janela = tk.Tk()
 janela.title(" ")
 janela.geometry("600x400")
-janela.config(bg = "lightgray")
+janela.config(bg = "lightyellow")
 janela.minsize(width=600, height= 400)
 janela.maxsize(width=600, height=400)
 
 #Frame principal
-frame_principal = tk.Frame(janela, bg="lightgray")
+frame_principal = tk.Frame(janela, bg="lightyellow")
 frame_principal.pack(expand=True)
 
 #Imagem
@@ -21,7 +21,7 @@ imagem = Image.open(caminho_imagem)
 imagem_tamanho = imagem.resize((450, 150))
 foto1 = ImageTk.PhotoImage(imagem_tamanho)
 
-label_imagem = tk.Label(frame_principal, image = foto1, bg = "lightgray")
+label_imagem = tk.Label(frame_principal, image = foto1, bg = "lightyellow")
 label_imagem.pack(pady = 10)
 
 
@@ -41,31 +41,31 @@ def copiar_senha():
         janela.clipboard_append(senha_gerada)
         janela.update()
 
-        label_confirmacao = tk.Label(frame_copiar, text="Senha Copiada!",bg="lightgray", fg="green")
+        label_confirmacao = tk.Label(frame_copiar, text="Senha Copiada!",bg="lightyellow", fg="green")
         label_confirmacao.pack(pady = 5)
         janela.after(2000, label_confirmacao.destroy)
     else:
-        label_confirmacao = tk.Label(frame_copiar, text="Nada pra copiar!", bg= "lightgray", fg="red")
+        label_confirmacao = tk.Label(frame_copiar, text="Nada pra copiar!", bg= "lightyellow", fg="red")
         label_confirmacao.pack(pady=5)
         janela.after(2000, label_confirmacao.destroy)
 
 
 #Frame gerar senha
-frame_senha = tk.Frame(frame_principal, bg="lightgray")
+frame_senha = tk.Frame(frame_principal, bg="lightyellow")
 frame_senha.pack(pady=10)
-label_senha = tk.Label(frame_senha, text="Escolha a quantidade de dígitos da senha:",font=("Comic Sans Ms",12), bg="lightgray")
+label_senha = tk.Label(frame_senha, text="Escolha a quantidade de dígitos da senha:",font=("Comic Sans Ms",12), bg="lightyellow")
 label_senha.pack(pady = 5)
-tamanho_senha = tk.Spinbox(frame_senha, from_= 4, to=16, justify="center")
+tamanho_senha = tk.Spinbox(frame_senha, from_= 4, to=16, justify="center", width = 15, bg= "white")
 tamanho_senha.pack(side = "left", padx=5)
-btn = tk.Button(frame_senha, text="Gerar Senha", command= gerar_senha)
+btn = tk.Button(frame_senha, text="Gerar Senha", command= gerar_senha, width=20, height=2, bg = "#FACFF0", activebackground = "#FACFF0", activeforeground="black")
 btn.pack(side = "left", padx=5)
 
 #Frame copiar senha
-frame_copiar = tk.Frame(frame_principal, bg = "lightgray")
+frame_copiar = tk.Frame(frame_principal, bg = "lightyellow")
 frame_copiar.pack(pady=10)
-campo_senha = tk.Entry(frame_copiar,justify="center")
+campo_senha = tk.Entry(frame_copiar,justify="center", bg="white")
 campo_senha.pack(pady=5)
-btn1 = tk.Button(frame_copiar, text="Copiar Senha", command=copiar_senha)
+btn1 = tk.Button(frame_copiar, text="Copiar Senha", command=copiar_senha, width=20, height = 2, bg="#FACFF0")
 btn1.pack(pady=5, padx=10)
 
 janela.mainloop()
