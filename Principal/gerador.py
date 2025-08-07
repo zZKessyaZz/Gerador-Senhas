@@ -65,7 +65,7 @@ frame_copiar = tk.Frame(frame_principal, bg = "lightyellow")
 frame_copiar.pack(pady=10)
 campo_senha = tk.Entry(frame_copiar,justify="center", bg="white")
 campo_senha.pack(pady=5)
-btn1 = tk.Button(frame_copiar, text="Copiar Senha", command=copiar_senha, width=20, height = 2, bg="#FACFF0")
+btn1 = tk.Button(frame_copiar, text="Copiar Senha", command=copiar_senha, width=20, height = 2, bg="#FACFF0", activebackground="#FACFF0", activeforeground="black")
 btn1.pack(pady=5, padx=10)
 
 janela.mainloop()
